@@ -1,6 +1,6 @@
 baseURL = "http://stultus.in/"
 languageCode = "en-us"
-title = "stultus.in"
+title = "stultus"
 theme = "hugo-geo"
 paginate = 5
 
@@ -33,6 +33,9 @@ paginate = 5
 
 	# Social buttons for sidebar
 	# Each of these are optional
+        # [[params.socialbuttons]]
+	# faicon = "gitlab"
+	# url = "https://gitlab.com/stultus/"
 	[[params.socialbuttons]]
 	faicon = "github"
 	url = "https://github.com/stultus"
@@ -42,6 +45,13 @@ paginate = 5
 	[[params.socialbuttons]]
 	faicon = "linkedin"
 	url = "https://linkedin.com/in/hrishi09/"
+	# [[params.socialbuttons]]
+	# faicon = "instagram"
+	# url = "https://instagram.com/stultuzz/"
+	[[params.socialbuttons]]
+	faicon = "book"
+	url = "https://goodreads.com/stultus/"
+
 
 	# Nav links below the profile picture
 	[[params.navlinks]]
@@ -52,6 +62,10 @@ paginate = 5
 	name = "Blog"
 	url = "posts/"
 
-	[[params.navlinks]]
-	name = "Tutorials"
-	url = "tutorial/"
+	# [[params.navlinks]]
+	# name = ""
+	# url = "media/"
+
+        [[params.navlinks]]
+	name = "Resume"
+	url = "resume/"
