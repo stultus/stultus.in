@@ -1,4 +1,57 @@
-baseURL = "http://example.org/"
+baseURL = "http://stultus.in/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "stultus.in"
 theme = "hugo-geo"
+paginate = 5
+
+[taxonomies]
+	tag = "tags"
+	tutorial = "tutorials"
+
+[params]
+	# Render the rotating globe in the sidebar
+	showglobe = true
+
+	# Include favicon
+	favicon = "favicon.ico"
+
+	# Google Analytics
+	# analytics = "SHORT-CODE-HERE"
+
+	# Email (optional)
+	email = "hrishi.kb@gmail.com"
+
+	# Header Title for the main page
+	header = "My ramblings"
+
+	# Sidebar profile picture
+	profilepic = "img/hrishi.jpg"
+
+	# Title/subtitle for the sidebar
+	title = "Hrishikesh Bhaskaran"
+	subtitle = "Husband | Hacktivist | Programmer"
+
+	# Social buttons for sidebar
+	# Each of these are optional
+	[[params.socialbuttons]]
+	faicon = "github"
+	url = "https://github.com/stultus"
+	[[params.socialbuttons]]
+	faicon = "twitter"
+	url = "https://twitter.com/_stultus"
+	[[params.socialbuttons]]
+	faicon = "linkedin"
+	url = "https://linkedin.com/in/hrishi09/"
+
+	# Nav links below the profile picture
+	[[params.navlinks]]
+	name = "About"
+	url = "about/"
+
+	[[params.navlinks]]
+	name = "Blog"
+	url = "posts/"
+
+	[[params.navlinks]]
+	name = "Tutorials"
+	url = "tutorial/"
