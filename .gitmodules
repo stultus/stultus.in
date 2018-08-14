@@ -1,3 +1,7 @@
 [submodule "themes/hugo-geo"]
 	path = themes/hugo-geo
 	url = git@github.com:alexurquhart/hugo-geo.git
+[submodule "public"]
+	path = public
+	url = git@github.com:stultus/stultus.github.io.git
+	branch = master
