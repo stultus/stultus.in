@@ -1,4 +1,4 @@
-baseURL = "http://stultus.in/"
+baseURL = "https://stultus.in/"
 languageCode = "en-us"
 title = "stultus"
 theme = "hugo-geo"
