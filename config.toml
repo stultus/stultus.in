@@ -33,7 +33,7 @@ paginate = 5
 
 	# Social buttons for sidebar
 	# Each of these are optional
-        # [[params.socialbuttons]]
+    # [[params.socialbuttons]]
 	# faicon = "gitlab"
 	# url = "https://gitlab.com/stultus/"
 	[[params.socialbuttons]]
@@ -60,7 +60,7 @@ paginate = 5
 
 	[[params.navlinks]]
 	name = "Blog"
-	url = "posts/"
+	url = "post/"
 
 	# [[params.navlinks]]
 	# name = ""
