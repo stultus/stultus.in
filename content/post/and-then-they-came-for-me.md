@@ -1,0 +1,74 @@
++++
+date = "2009-01-25T09:32:45-04:00"
+draft = false
+title = "And Then They Came For Me!"
+tags = ["archive", "Lasantha Wickrematunge", "The sunday reader"]
++++
+
+[Lasantha Manilal Wickrematunge](https://en.wikipedia.org/wiki/Lasantha_Wickrematunge) (5 April 1958 – 8 January 2009) was a Sri Lankan journalist, politician and human rights activist who was assassinated in January 2009.  The following is an editorial Wickremange had written shortly before his death, and that was published posthumously
+
+### And Then They Came For Me
+No other profession calls on its practitioners to lay down their lives for their art save the armed forces and, in Sri Lanka, journalism. In the course of the past few years, the independent media have increasingly come under attack. Electronic and print-media institutions have been burnt, bombed, sealed and coerced. Countless journalists have been harassed, threatened and killed. It has been my honour to belong to all those categories and now especially the last.
+
+I have been in the business of journalism a good long time. Indeed, 2009 will be The Sunday Leader's 15th year. Many things have changed in Sri Lanka during that time, and it does not need me to tell you that the greater part of that change has been for the worse. We find ourselves in the midst of a civil war ruthlessly prosecuted by protagonists whose bloodlust knows no bounds. Terror, whether perpetrated by terrorists or the state, has become the order of the day. Indeed, murder has become the primary tool whereby the state seeks to control the organs of liberty. Today it is the journalists, tomorrow it will be the judges. For neither group have the risks ever been higher or the stakes lower.
+
+Why then do we do it? I often wonder that. After all, I too am a husband, and the father of three wonderful children. I too have responsibilities and obligations that transcend my profession, be it the law or journalism. Is it worth the risk? Many people tell me it is not. Friends tell me to revert to the bar, and goodness knows it offers a better and safer livelihood. Others, including political leaders on both sides, have at various times sought to induce me to take to politics, going so far as to offer me ministries of my choice. Diplomats, recognising the risk journalists face in Sri Lanka, have offered me safe passage and the right of residence in their countries. Whatever else I may have been stuck for, I have not been stuck for choice.
+
+But there is a calling that is yet above high office, fame, lucre and security. It is the call of conscience.
+
+The Sunday Leader has been a controversial newspaper because we say it like we see it: whether it be a spade, a thief or a murderer, we call it by that name. We do not hide behind euphemism. The investigative articles we print are supported by documentary evidence thanks to the public-spiritedness of citizens who at great risk to themselves pass on this material to us. We have exposed scandal after scandal, and never once in these 15 years has anyone proved us wrong or successfully prosecuted us.
+
+The free media serve as a mirror in which the public can see itself sans mascara and styling gel. From us you learn the state of your nation, and especially its management by the people you elected to give your children a better future. Sometimes the image you see in that mirror is not a pleasant one. But while you may grumble in the privacy of your armchair, the journalists who hold the mirror up to you do so publicly and at great risk to themselves. That is our calling, and we do not shirk it.
+
+Every newspaper has its angle, and we do not hide the fact that we have ours. Our commitment is to see Sri Lanka as a transparent, secular, liberal democracy. Think about those words, for they each has profound meaning. Transparent because government must be openly accountable to the people and never abuse their trust. Secular because in a multi-ethnic and multi-cultural society such as ours, secularism offers the only common ground by which we might all be united. Liberal because we recognise that all human beings are created different, and we need to accept others for what they are and not what we would like them to be. And democratic... well, if you need me to explain why that is important, you'd best stop buying this paper.
+
+The Sunday Leader has never sought safety by unquestioningly articulating the majority view. Let's face it, that is the way to sell newspapers. On the contrary, as our opinion pieces over the years amply demonstrate, we often voice ideas that many people find distasteful. For example, we have consistently espoused the view that while separatist terrorism must be eradicated, it is more important to address the root causes of terrorism, and urged government to view Sri Lanka's ethnic strife in the context of history and not through the telescope of terrorism. We have also agitated against state terrorism in the so-called war against terror, and made no secret of our horror that Sri Lanka is the only country in the world routinely to bomb its own citizens. For these views we have been labelled traitors, and if this be treachery, we wear that label proudly.
+
+Many people suspect that The Sunday Leader has a political agenda: it does not. If we appear more critical of the government than of the opposition it is only because we believe that - pray excuse cricketing argot - there is no point in bowling to the fielding side. Remember that for the few years of our existence in which the UNP was in office, we proved to be the biggest thorn in its flesh, exposing excess and corruption wherever it occurred. Indeed, the steady stream of embarrassing expos‚s we published may well have served to precipitate the downfall of that government.
+
+Neither should our distaste for the war be interpreted to mean that we support the Tigers. The LTTE are among the most ruthless and bloodthirsty organisations ever to have infested the planet. There is no gainsaying that it must be eradicated. But to do so by violating the rights of Tamil citizens, bombing and shooting them mercilessly, is not only wrong but shames the Sinhalese, whose claim to be custodians of the dhamma is forever called into question by this savagery, much of which is unknown to the public because of censorship.
+
+What is more, a military occupation of the country's north and east will require the Tamil people of those regions to live eternally as second-class citizens, deprived of all self respect. Do not imagine that you can placate them by showering "development" and "reconstruction" on them in the post-war era. The wounds of war will scar them forever, and you will also have an even more bitter and hateful Diaspora to contend with. A problem amenable to a political solution will thus become a festering wound that will yield strife for all eternity. If I seem angry and frustrated, it is only because most of my countrymen - and all of the government - cannot see this writing so plainly on the wall.
+
+It is well known that I was on two occasions brutally assaulted, while on another my house was sprayed with machine-gun fire. Despite the government's sanctimonious assurances, there was never a serious police inquiry into the perpetrators of these attacks, and the attackers were never apprehended. In all these cases, I have reason to believe the attacks were inspired by the government. When finally I am killed, it will be the government that kills me.
+
+The irony in this is that, unknown to most of the public, Mahinda and I have been friends for more than a quarter century. Indeed, I suspect that I am one of the few people remaining who routinely addresses him by his first name and uses the familiar Sinhala address oya when talking to him. Although I do not attend the meetings he periodically holds for newspaper editors, hardly a month passes when we do not meet, privately or with a few close friends present, late at night at President's House. There we swap yarns, discuss politics and joke about the good old days. A few remarks to him would therefore be in order here.
+
+Mahinda, when you finally fought your way to the SLFP presidential nomination in 2005, nowhere were you welcomed more warmly than in this column. Indeed, we broke with a decade of tradition by referring to you throughout by your first name. So well known were your commitments to human rights and liberal values that we ushered you in like a breath of fresh air. Then, through an act of folly, you got yourself involved in the Helping Hambantota scandal. It was after a lot of soul-searching that we broke the story, at the same time urging you to return the money. By the time you did so several weeks later, a great blow had been struck to your reputation. It is one you are still trying to live down.
+
+You have told me yourself that you were not greedy for the presidency. You did not have to hanker after it: it fell into your lap. You have told me that your sons are your greatest joy, and that you love spending time with them, leaving your brothers to operate the machinery of state. Now, it is clear to all who will see that that machinery has operated so well that my sons and daughter do not themselves have a father.
+
+In the wake of my death I know you will make all the usual sanctimonious noises and call upon the police to hold a swift and thorough inquiry. But like all the inquiries you have ordered in the past, nothing will come of this one, too. For truth be told, we both know who will be behind my death, but dare not call his name. Not just my life, but yours too, depends on it.
+
+Sadly, for all the dreams you had for our country in your younger days, in just three years you have reduced it to rubble. In the name of patriotism you have trampled on human rights, nurtured unbridled corruption and squandered public money like no other President before you. Indeed, your conduct has been like a small child suddenly let loose in a toyshop. That analogy is perhaps inapt because no child could have caused so much blood to be spilled on this land as you have, or trampled on the rights of its citizens as you do. Although you are now so drunk with power that you cannot see it, you will come to regret your sons having so rich an inheritance of blood. It can only bring tragedy. As for me, it is with a clear conscience that I go to meet my Maker. I wish, when your time finally comes, you could do the same. I wish.
+
+As for me, I have the satisfaction of knowing that I walked tall and bowed to no man. And I have not travelled this journey alone. Fellow journalists in other branches of the media walked with me: most of them are now dead, imprisoned without trial or exiled in far-off lands. Others walk in the shadow of death that your Presidency has cast on the freedoms for which you once fought so hard. You will never be allowed to forget that my death took place under your watch. As anguished as I know you will be, I also know that you will have no choice but to protect my killers: you will see to it that the guilty one is never convicted. You have no choice. I feel sorry for you, and Shiranthi will have a long time to spend on her knees when next she goes for Confession for it is not just her owns sins which she must confess, but those of her extended family that keeps you in office.
+
+As for the readers of The Sunday Leader, what can I say but Thank You for supporting our mission. We have espoused unpopular causes, stood up for those too feeble to stand up for themselves, locked horns with the high and mighty so swollen with power that they have forgotten their roots, exposed corruption and the waste of your hard-earned tax rupees, and made sure that whatever the propaganda of the day, you were allowed to hear a contrary view. For this I - and my family - have now paid the price that I have long known I will one day have to pay. I am - and have always been - ready for that. I have done nothing to prevent this outcome: no security, no precautions. I want my murderer to know that I am not a coward like he is, hiding behind human shields while condemning thousands of innocents to death. What am I among so many? It has long been written that my life would be taken, and by whom. All that remains to be written is when.
+
+That The Sunday Leader will continue fighting the good fight, too, is written. For I did not fight this fight alone. Many more of us have to be - and will be - killed before The Leader is laid to rest. I hope my assassination will be seen not as a defeat of freedom but an inspiration for those who survive to step up their efforts. Indeed, I hope that it will help galvanise forces that will usher in a new era of human liberty in our beloved motherland. I also hope it will open the eyes of your President to the fact that however many are slaughtered in the name of patriotism, the human spirit will endure and flourish. Not all the Rajapakses combined can kill that.
+
+People often ask me why I take such risks and tell me it is a matter of time before I am bumped off. Of course I know that: it is inevitable. But if we do not speak out now, there will be no one left to speak for those who cannot, whether they be ethnic minorities, the disadvantaged or the persecuted. An example that has inspired me throughout my career in journalism has been that of the German theologian, Martin Niem”ller. In his youth he was an anti-Semite and an admirer of Hitler. As Nazism took hold in Germany, however, he saw Nazism for what it was: it was not just the Jews Hitler sought to extirpate, it was just about anyone with an alternate point of view. Niem”ller spoke out, and for his trouble was incarcerated in the Sachsenhausen and Dachau concentration camps from 1937 to 1945, and very nearly executed. While incarcerated, Niem”ller wrote a poem that, from the first time I read it in my teenage years, stuck hauntingly in my mind:
+
+*First they came for the Jews*
+
+*and I did not speak out because I was not a Jew.*
+
+*Then they came for the Communists*
+
+*and I did not speak out because I was not a Communist.*
+
+*Then they came for the trade unionists*
+
+*and I did not speak out because I was not a trade unionist.*
+
+*Then they came for me*
+
+*and there was no one left to speak out for me.*
+
+If you remember nothing else, remember this: The Leader is there for you, be you Sinhalese, Tamil, Muslim, low-caste, homosexual, dissident or disabled. Its staff will fight on, unbowed and unafraid, with the courage to which you have become accustomed. Do not take that commitment for granted. Let there be no doubt that whatever sacrifices we journalists make, they are not made for our own glory or enrichment: they are made for you. Whether you deserve their sacrifice is another matter. As for me, God knows I tried.
+
+
+---
+source : ദ സണ്‍‌ഡേ ലീഡര്‍
+http://www.thesundayleader.lk/20090111/editorial-.htm
