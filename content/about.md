@@ -5,7 +5,7 @@ title = "About Me"
 +++
 
 I am Hrishikesh (natively written as ഋഷികേശ് in Malayalam). 
-The name is of Sanskrit origin, meaning “the Lord/Master of senses”.
+The name is of Sanskrit origin, meaning “The lord/master of senses”.
 
 I am a software engineer, privacy advocate, pythonista and a free software enthusiast. Most of my contributions has been in the language computing space under the aegis of the organisation [Swathathra Malayalam Computing](https://smc.org.in). I also contribute to the [PeARS Project](https://pearsearch.org) - which is an ongoing effort to build a fully distributed, p2p search engine.
 
