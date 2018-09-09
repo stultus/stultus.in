@@ -2,7 +2,7 @@
 date = "2009-01-25T09:32:45-04:00"
 draft = false
 title = "And Then They Came For Me!"
-tags = ["archive", "Lasantha Wickrematunge", "The sunday reader"]
+tags = ["archive", "Lasantha Wickrematunge", "The sunday reader", "activism"]
 +++
 
 [Lasantha Manilal Wickrematunge](https://en.wikipedia.org/wiki/Lasantha_Wickrematunge) (5 April 1958 – 8 January 2009) was a Sri Lankan journalist, politician and human rights activist who was assassinated in January 2009.  The following is an editorial Wickremange had written shortly before his death, and that was published posthumously
