@@ -1,6 +1,6 @@
 baseURL = "https://stultus.in/"
 languageCode = "en-us"
-title = "stultus"
+title = "stultus.in"
 theme = "hugo-geo"
 paginate = 5
 
