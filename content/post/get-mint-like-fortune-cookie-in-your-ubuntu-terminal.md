@@ -3,7 +3,7 @@ date = "2010-11-03T09:32:45-04:00"
 draft = false
 highlight = true
 title = "Get Mint Like Fortune-Cookie in your Ubuntu Terminal!"
-tags = ["hack", "linux mint", "terminal"]
+tags = ["hack", "linux mint", "terminal", "ubuntu"]
 +++
 
 Most of you might have noticed a cool feature which is available in Linux-Mint,
