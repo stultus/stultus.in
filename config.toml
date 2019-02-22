@@ -44,7 +44,7 @@ paginate = 5
 	url = "https://twitter.com/_stultus"
 	[[params.socialbuttons]]
 	faicon = "linkedin"
-	url = "https://linkedin.com/in/hrishi09/"
+	url = "https://linkedin.com/in/stultus/"
 	# [[params.socialbuttons]]
 	# faicon = "instagram"
 	# url = "https://instagram.com/stultuzz/"
