@@ -1,71 +1,84 @@
-baseURL = "https://stultus.in/"
-languageCode = "en-us"
-title = "stultus.in"
-theme = "hugo-geo"
-paginate = 5
+#baseurl = "http://www.example.com"
+title = "stultus"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "ml"
 
-[taxonomies]
-	tag = "tags"
-	tutorial = "tutorials"
+paginate = 20
+canonifyurls = true
 
+pygmentsstyle = "bw"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+disqusShortname = "stultus-in"
+commentourl = "https://stultus-in.disqus.com/embed.js"
 [params]
-	# Render the rotating globe in the sidebar
-	showglobe = true
+    author = "Hrishikesh Bhaskaran"
+    info = "Husband | Hacktivist | Programmer"
+    description = "Hrishikesh Bhaskaran"
+    keywords = "blog,developer,personal"
+    avatarurl = "img/hrishi.jpg"
 
-	# Include favicon
-	favicon = "favicon.ico"
+    #favicon_32 = "/img/favicon-32x32.png"
+    #favicon_16 = "/img/favicon-16x16.png"
 
-	# Google Analytics
-	# analytics = "SHORT-CODE-HERE"
+    footercontent = "'It is our choices ... that show what we truly are, far more than our abilities' - Albus Dumbledore"
 
-	# Email (optional)
-	email = "hrishi.kb@gmail.com"
+    hidecredits = false
+    hidecopyright = false
 
-	# Header Title for the main page
-	header = "My ramblings"
+    rtl = false
 
-	# Sidebar profile picture
-	profilepic = "img/hrishi.jpg"
+    math = true
+    custom_css = ["css/custom.css"]
 
-	# Title/subtitle for the sidebar
-	title = "Hrishikesh Bhaskaran"
-	subtitle = "Husband | Hacktivist | Programmer"
+# Social links
+[[params.social]]
+    name = "Github"
+    icon = "fab fa-github fa-2x"
+    weight = 1
+    url = "https://github.com/stultus/"
+[[params.social]]
+    name = "Gitlab"
+    icon = "fab fa-gitlab fa-2x"
+    weight = 2
+    url = "https://gitlab.com/stultus/"
+[[params.social]]
+    name = "Twitter"
+    icon = "fab fa-twitter fa-2x"
+    weight = 3
+    url = "https://twitter.com/_stultus/"
+[[params.social]]
+    name = "Linkedin"
+    icon ="fab fa-linkedin fa-2x"
+    weight = 4
+    url = "https://linkedin.com/in/stultus/"
 
-	# Social buttons for sidebar
-	# Each of these are optional
-    # [[params.socialbuttons]]
-	# faicon = "gitlab"
-	# url = "https://gitlab.com/stultus/"
-	[[params.socialbuttons]]
-	faicon = "github"
-	url = "https://github.com/stultus"
-	[[params.socialbuttons]]
-	faicon = "twitter"
-	url = "https://twitter.com/_stultus"
-	[[params.socialbuttons]]
-	faicon = "linkedin"
-	url = "https://linkedin.com/in/stultus/"
-	# [[params.socialbuttons]]
-	# faicon = "instagram"
-	# url = "https://instagram.com/stultuzz/"
-	[[params.socialbuttons]]
-	faicon = "book"
-	url = "https://goodreads.com/stultus/"
+[[params.social]]
+    name = "Goodreads"
+    icon ="fas fa-book fa-2x"
+    weight = 5
+    url = "https://goodreads.com/stultus/"
+
+[[params.social]]
+    name = "Facebook"
+    icon ="fab fa-facebook fa-2x"
+    weight = 6
+    url = "https://facebook.com/stultus.hrishi/"
 
 
-	# Nav links below the profile picture
-	[[params.navlinks]]
-	name = "About"
-	url = "about/"
-
-	[[params.navlinks]]
-	name = "Blog"
-	url = "post/"
-
-	# [[params.navlinks]]
-	# name = ""
-	# url = "media/"
-
-        [[params.navlinks]]
-	name = "Resume"
-	url = "resume/"
+[[params.social]]
+    name = "Instagram"
+    icon ="fab fa-instagram fa-2x"
+    weight = 7
+    url = "https://instagram.com/in/stultusz/"
+# Menu links
+[[menu.main]]
+    name = "Blog"
+    weight = 1
+    url  = "/post/"
+[[menu.main]]
+    name = "About"
+    weight = 2
+    url = "/about/"
