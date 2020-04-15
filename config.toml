@@ -61,17 +61,11 @@ commentourl = "https://stultus-in.disqus.com/embed.js"
     weight = 5
     url = "https://goodreads.com/stultus/"
 
-[[params.social]]
-    name = "Facebook"
-    icon ="fab fa-facebook fa-2x"
-    weight = 6
-    url = "https://facebook.com/stultus.hrishi/"
-
 
 [[params.social]]
     name = "Instagram"
     icon ="fab fa-instagram fa-2x"
-    weight = 7
+    weight = 6
     url = "https://instagram.com/in/stultusz/"
 # Menu links
 [[menu.main]]
