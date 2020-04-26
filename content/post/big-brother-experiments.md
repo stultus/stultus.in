@@ -2,7 +2,7 @@
 date = "2015-08-07T09:32:45-04:00"
 draft = false
 title = "ചില വല്ല്യേട്ടൻ പരീക്ഷണങ്ങളുടെ കഥകളും കഥയില്ലായ്മകളും!"
-tags = ["internet", "democrasy", "censorship", "freedom", "activism", "hacktivism"]
+tags = ["internet", "democracy", "censorship", "freedom", "activism", "hacktivism"]
 +++
 <center><small>
     മലയാളനാട് വെബ് മാഗസിനില്‍ പ്രസിദ്ധീകരിച്ചത്
