@@ -78,3 +78,7 @@ unsafe= true
     name = "About"
     weight = 2
     url = "/about/"
+[[menu.main]]
+    name = "Wiki"
+    weight = 3
+    url = "https://wiki.stultus.in"
