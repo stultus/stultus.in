@@ -71,11 +71,11 @@ unsafe= true
     url = "https://instagram.com/in/stultusz/"
 # Menu links
 [[menu.main]]
-    name = "Blog"
+    name = "blog"
     weight = 1
     url  = "/post/"
 [[menu.main]]
-    name = "About"
+    name = "about"
     weight = 2
     url = "/about/"
 [[menu.main]]
