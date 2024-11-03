@@ -81,4 +81,4 @@ unsafe= true
 [[menu.main]]
     name = "notes"
     weight = 3
-    url = "https://notes.stultus.in"
+    url = "/notes/"
