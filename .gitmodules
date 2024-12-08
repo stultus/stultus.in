@@ -10,3 +10,6 @@
 [submodule "public"]
 	path = public
 	url = git@github.com:stultus/stultus.github.io.git
+[submodule "themes/stupidly-minimal"]
+	path = themes/stupidly-minimal
+	url = git@github.com:stultus/hugo-stupidly-minimal.git
