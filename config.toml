@@ -1,4 +1,4 @@
-#baseurl = "http://www.example.com"
+baseurl = "https://stultus.in/"
 title = "stultus"
 theme = "stupidly-minimal"
 languagecode = "en"
@@ -7,78 +7,48 @@ defaultcontentlanguage = "ml"
 paginate = 20
 canonifyurls = true
 
-pygmentsstyle = "bw"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
-
-disqusShortname = "stultus-in"
-commentourl = "https://stultus-in.disqus.com/embed.js"
 [markup.goldmark.renderer]
-unsafe= true
+unsafe = true
+
+[markup.highlight]
+noClasses = false
+style = "monokai"
+
 [params]
     author = "Hrishikesh Bhaskaran"
-    info = "VP of Engineering at Entri, a Kochi-based ed-tech startup. technology enthusiast with a passion for technology policy, FOSS, and language computing; contributor to the screenplay of the 2023 Malayalam movie ‘Neelavelicham’."
-    description = "Hrishikesh Bhaskaran"
-    keywords = "blog,developer,personal"
+    tagline = "Developer / Flâneur / Storyteller"
+    info = "Vice President of Engineering at [Entri](https://entri.me). Building things, telling stories, wandering through ideas. Interested in FOSS, language computing, privacy, and the places where technology meets culture."
+    description = "Hrishikesh Bhaskaran. Developer, Flâneur, Storyteller."
+    keywords = "developer,storyteller,foss,language-computing,personal"
     avatarurl = "img/hrishikesh_bhaskaran.jpg"
+    logourl = "img/logo.png"
+    email = "hrishi.kb@gmail.com"
 
-    #favicon_32 = "/img/favicon-32x32.png"
-    #favicon_16 = "/img/favicon-16x16.png"
-
-    footercontent = "'It is our choices ... that show what we truly are, far more than our abilities' - Albus Dumbledore"
+    footercontent = "'It is our choices ... that show what we truly are, far more than our abilities' — Albus Dumbledore"
 
     hidecredits = false
     hidecopyright = false
-
     rtl = false
-
-    math = true
     custom_css = ["css/custom.css"]
 
-# Social links
-[[params.social]]
-    name = "Github"
-    icon = "fab fa-github fa-2x"
-    weight = 1
-    url = "https://github.com/stultus/"
-[[params.social]]
-    name = "Gitlab"
-    icon = "fab fa-gitlab fa-2x"
-    weight = 2
-    url = "https://gitlab.com/stultus/"
-[[params.social]]
-    name = "Twitter"
-    icon = "fab fa-twitter fa-2x"
-    weight = 3
-    url = "https://twitter.com/_stultus/"
-[[params.social]]
-    name = "Linkedin"
-    icon ="fab fa-linkedin fa-2x"
-    weight = 4
-    url = "https://linkedin.com/in/stultus/"
-
-[[params.social]]
-    name = "Goodreads"
-    icon ="fas fa-book fa-2x"
-    weight = 5
-    url = "https://goodreads.com/stultus/"
-
-
-[[params.social]]
-    name = "Instagram"
-    icon ="fab fa-instagram fa-2x"
-    weight = 6
-    url = "https://instagram.com/in/stultusz/"
 # Menu links
 [[menu.main]]
     name = "blog"
     weight = 1
     url  = "/post/"
 [[menu.main]]
-    name = "about"
+    name = "projects"
     weight = 2
+    url = "/projects/"
+[[menu.main]]
+    name = "now"
+    weight = 3
+    url = "/now/"
+[[menu.main]]
+    name = "about"
+    weight = 4
     url = "/about/"
 [[menu.main]]
     name = "notes"
-    weight = 3
+    weight = 5
     url = "/notes/"
