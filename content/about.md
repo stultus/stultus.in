@@ -2,6 +2,10 @@
 draft = false
 title = "About"
 type = "about"
+date = "2025-01-01"
+lastmod = "2026-04-05"
+description = "Hrishikesh Bhaskaran (stultus) — software engineer, Vice President of Engineering at Entri, FOSS contributor, and screenwriter from Kerala, India. Also known as Hrishi."
+keywords = ["Hrishikesh Bhaskaran", "Hrishikesh", "Hrishi", "stultus", "Entri", "VP Engineering", "FOSS", "Malayalam computing", "Kerala", "screenwriter", "Neelavelicham", "SMC", "PeARS"]
 +++
 
 Hrishikesh Bhaskaran is a software engineer with over 14 years of experience in building products and engineering teams. He currently serves as the Vice President of Engineering at [Entri](https://entri.me), a Kochi-based ed-tech startup, where he leads the engineering organization. He has been part of Entri's core team since its early days. He also has hands-on development experience in the telecom and medical software domains.
@@ -32,4 +36,4 @@ Hrishikesh is a regular speaker at colleges and has appeared in TV discussions o
 * PGP: `9F219A816C4391643B85041A12C1047FA60A6F31`
 * Email: hrishi.kb@gmail.com
 
-*The handle "stultus" is Latin for stupid.*
+*The handle "[stultus](/notes/stultus/)" is Latin for stupid.*
