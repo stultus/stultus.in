@@ -28,6 +28,8 @@ Things I've built, contributed to, or helped bring into the world.
 
 **[DicomParser](https://github.com/stultus/DicomParser)** — Parse a DICOM file and return it as a Python dictionary.
 
+**[Chess Mate](https://github.com/stultus/chess-mate)** — A chess playing companion with built-in move analysis. Play against a friend (or yourself) while getting real-time move suggestions powered by a client-side chess engine.
+
 
 ## Film
 
