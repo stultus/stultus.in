@@ -24,6 +24,8 @@ He contributed the additional screenplay for the 2023 Malayalam film *[Neelaveli
 
 ## Other things
 
+He serves on the executive board of [TinkerHub Foundation](https://tinkerhub.org/), a community of tinkerers, makers, and students working to empower people who share a passion to innovate.
+
 He was one of the architects of the [ICU movement](https://www.facebook.com/InternationalChaluUnion/), a socio-cultural expression platform of Kerala's youth.
 
 Hrishikesh is a regular speaker at colleges and has appeared in TV discussions on technology, public policy, net neutrality, privacy, free software, and career guidance.
