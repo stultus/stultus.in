@@ -3,7 +3,7 @@ date = "2025-01-01"
 draft = false
 title = "Projects"
 description = "Software, films, and community projects by Hrishikesh Bhaskaran — Scriptty, PeARS contributions, SMC tools, the Malayalam Hugo theme, and the screenplay for Neelavelicham."
-keywords = ["projects", "Scriptty", "PeARS", "SMC", "Swathanthra Malayalam Computing", "Neelavelicham", "Hrishikesh Bhaskaran", "stultus", "Hugo theme", "Malayalam software", "FOSS"]
+keywords = ["projects", "Scriptty", "Kavu", "PeARS", "SMC", "Swathanthra Malayalam Computing", "Neelavelicham", "Hrishikesh Bhaskaran", "stultus", "Hugo theme", "digital garden", "Malayalam software", "FOSS"]
 +++
 
 Things I've built, contributed to, or helped bring into the world.
@@ -22,7 +22,7 @@ Things I've built, contributed to, or helped bring into the world.
 
 **[Flask-WADO](https://github.com/stultus/Flask-wado)** — A WADO (Web Access to DICOM Objects) server written in Python using Flask. For medical imaging systems.
 
-**[hugo-digital-garden-theme](https://github.com/stultus/hugo-digital-garden-theme)** — Hugo theme for digital gardens. Interactive network graph, note maturity stages, search, and fullscreen mode.
+**[Kavu](https://github.com/stultus/kavu)** — Monospace, terminal-inspired Hugo theme for digital gardens and personal knowledge bases. Note maturity stages, network graph, backlinks, wikilink rendering, dark mode. Named after കാവ് (*kavu*), the sacred groves of Kerala. Powers [stultus.in/notes](/notes/).
 
 **[stupidly-minimal](https://github.com/stultus/hugo-stupidly-minimal)** — A clean, monospace Hugo theme for personal websites. Dark mode, responsive, Malayalam support.
 
