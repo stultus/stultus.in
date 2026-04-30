@@ -1,6 +1,7 @@
 +++
 draft = false
 title = "About"
+seoTitle = "About Hrishikesh Bhaskaran (stultus) — VP Engineering at Entri | Developer, Screenwriter & FOSS Contributor"
 type = "about"
 date = "2025-01-01"
 lastmod = "2026-04-05"

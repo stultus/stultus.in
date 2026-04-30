@@ -22,8 +22,11 @@ style = "monokai"
     description = "Hrishikesh Bhaskaran (stultus) — Vice President of Engineering at Entri. Developer, FOSS contributor, screenwriter, and flâneur from Kerala, India."
     keywords = "Hrishikesh Bhaskaran, Hrishikesh, Hrishi, stultus, Entri, developer, VP Engineering, FOSS, Malayalam computing, Kerala, screenwriter, Neelavelicham, digital privacy, SMC"
     avatarurl = "img/hrishikesh_bhaskaran.jpg"
+    ogImage = "img/hrishikesh_bhaskaran-bnw.png"
     logourl = "img/logo.png"
     email = "hrishi.kb@gmail.com"
+    twitter = "_stultus"
+    alternateNames = "stultus,Hrishi,Hrishikesh"
 
     footercontent = "'It is our choices ... that show what we truly are, far more than our abilities' — Albus Dumbledore"
 
