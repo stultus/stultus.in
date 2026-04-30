@@ -3,6 +3,7 @@ date = "2016-02-15T09:32:45-04:00"
 draft = false
 title = "നെറ്റ്‌ന്യൂട്രാലിറ്റി: ഉപയോക്താക്കളുടെ വിജയം"
 tags = ["activism", "hactivism", "internet", "internet freedom", "facebook", "net neutrality"]
+description = "How India's net neutrality movement won — TRAI's ban on differential pricing and what it meant for users — originally published in South Live."
 +++
 <center><small>സൗത്ത് ലൈവില്‍ പ്രസിദ്ധീകരിച്ചത് </small></center>
 

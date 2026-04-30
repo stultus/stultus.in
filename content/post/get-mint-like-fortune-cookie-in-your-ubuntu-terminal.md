@@ -4,6 +4,7 @@ draft = false
 highlight = true
 title = "Get Mint Like Fortune-Cookie in your Ubuntu Terminal!"
 tags = ["hack", "linux mint", "terminal", "ubuntu"]
+description = "How to set up a fortune-cookie greeting in your Ubuntu terminal, the way Linux Mint shows a quote each time you open one."
 +++
 
 Most of you might have noticed a cool feature which is available in Linux-Mint,

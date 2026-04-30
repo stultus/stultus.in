@@ -2,6 +2,8 @@
 date = "2025-01-01"
 draft = false
 title = "Projects"
+description = "Software, films, and community projects by Hrishikesh Bhaskaran — Scriptty, PeARS contributions, SMC tools, the Malayalam Hugo theme, and the screenplay for Neelavelicham."
+keywords = ["projects", "Scriptty", "PeARS", "SMC", "Swathanthra Malayalam Computing", "Neelavelicham", "Hrishikesh Bhaskaran", "stultus", "Hugo theme", "Malayalam software", "FOSS"]
 +++
 
 Things I've built, contributed to, or helped bring into the world.

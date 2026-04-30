@@ -3,6 +3,7 @@ date = "2015-12-31T09:32:45-04:00"
 draft = false
 title = "ഫ്രീബേസിക്‌സ്: എന്തിന് ഈ വിലങ്ങ് സ്വയം അണിയണം?"
 tags = ["activism", "hactivism", "internet", "internet freedom", "facebook"]
+description = "Why Facebook's Free Basics is a threat to net neutrality and the open internet in India — originally published in South Live."
 +++
 <center><small> സൗത്ത് ലൈവില്‍ പ്രസിദ്ധീകരിച്ചത് </small> </center>
 

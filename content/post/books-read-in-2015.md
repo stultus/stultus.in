@@ -3,6 +3,7 @@ date = "2015-12-24T09:32:45-04:00"
 draft = false
 title = "Books Read in 2015"
 tags = ["books", "reading"]
+description = "A reading list of every book I finished in 2015, in the order I read them."
 +++
 Here is the list of books I read in 2015. The order is in which I read them.
     

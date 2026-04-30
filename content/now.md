@@ -2,6 +2,8 @@
 date = "2026-03-27"
 draft = false
 title = "Now"
+description = "What Hrishikesh Bhaskaran is up to right now — leading engineering at Entri, contributing to PeARS, and tending a digital garden of notes."
+keywords = ["now page", "Hrishikesh Bhaskaran", "stultus", "Entri", "PeARS", "digital garden", "current work"]
 +++
 
 *This is a [now page](https://nownownow.com/about). Last updated March 2026.*

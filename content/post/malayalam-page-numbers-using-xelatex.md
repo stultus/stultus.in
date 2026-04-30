@@ -4,6 +4,7 @@ draft = false
 title = "Malayalam Page Numbers in XeLatex"
 highlight = true
 tags = ["xelatex", "malayalam", "hack", "unicode"]
+description = "How to render Malayalam page numbers in XeLaTeX — from work helping SCERT Kerala move to Unicode-based textbook publishing."
 +++
 
 Recently I had an opportunity to be a part of an effort to enable [SCERT](http://www.scert.kerala.gov.in/)(The Govt. organization which is responsible for the content, curriculum and the textbooks which are used in the schools of the state) to use unicode technologies for textbook publishing. 
