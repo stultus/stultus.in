@@ -10,7 +10,7 @@ keywords = ["now page", "Hrishikesh Bhaskaran", "stultus", "Entri", "PeARS", "di
 
 ## Work
 
-Leading engineering at [Entri](https://entri.me). Building products that make education accessible in Indian languages.
+Leading engineering at [Entri](https://entri.app). Building products that make education accessible in Indian languages.
 
 ## Building
 

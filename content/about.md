@@ -8,7 +8,7 @@ description = "Hrishikesh Bhaskaran (stultus) — software engineer, Vice Presid
 keywords = ["Hrishikesh Bhaskaran", "Hrishikesh", "Hrishi", "stultus", "Entri", "VP Engineering", "FOSS", "Malayalam computing", "Kerala", "screenwriter", "Neelavelicham", "SMC", "PeARS"]
 +++
 
-Hrishikesh Bhaskaran is a software engineer with over 14 years of experience in building products and engineering teams. He currently serves as the Vice President of Engineering at [Entri](https://entri.me), a Kochi-based ed-tech startup, where he leads the engineering organization. He has been part of Entri's core team since its early days. He also has hands-on development experience in the telecom and medical software domains.
+Hrishikesh Bhaskaran is a software engineer with over 14 years of experience in building products and engineering teams. He currently serves as the Vice President of Engineering at [Entri](https://entri.app), a Kochi-based ed-tech startup, where he leads the engineering organization. He has been part of Entri's core team since its early days. He also has hands-on development experience in the telecom and medical software domains.
 
 He is an active contributor to the free and open source software community, a screenwriter, and a speaker on technology, policy, privacy, and digital rights.
 
