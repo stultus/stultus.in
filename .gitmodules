@@ -1,15 +1,3 @@
-[submodule "themes/hugo-geo"]
-	path = themes/hugo-geo
-	url = git@github.com:alexurquhart/hugo-geo.git
-[submodule "themes/live-hugo"]
-	path = themes/live-hugo
-	url = https://github.com/themefisher/liva-hugo.git
-[submodule "themes/hugo-coder"]
-	path = themes/hugo-coder
-	url = https://github.com/luizdepra/hugo-coder.git
-[submodule "public"]
-	path = public
-	url = git@github.com:stultus/stultus.github.io.git
 [submodule "themes/stupidly-minimal"]
 	path = themes/stupidly-minimal
-	url = git@github.com:stultus/hugo-stupidly-minimal.git
+	url = https://github.com/stultus/hugo-stupidly-minimal.git
