@@ -35,6 +35,16 @@ style = "monokai"
     rtl = false
     custom_css = ["css/custom.css"]
 
+# Remote feed sources (consumed by layouts/partials/data/feeds.html)
+[params.feeds]
+    movies = "https://raw.githubusercontent.com/stultus/hrishi-feeds/main/data/movies.json"
+    books  = "https://raw.githubusercontent.com/stultus/hrishi-feeds/main/data/books.json"
+
+# Cache resources.GetRemote responses for 24h
+[caches]
+    [caches.getresource]
+        maxAge = "24h"
+
 # Menu links
 [[menu.main]]
     name = "blog"

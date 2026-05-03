@@ -1,0 +1,78 @@
+{{/*
+  Render a sortable, filterable HTML table from a slice of movie entries.
+  Caller passes the slice as context. Schema: see hrishi-feeds README.
+
+  The poster column is emitted only when at least one entry exposes a poster
+  source. Today the upstream feed has review_html = null for every entry,
+  so the column is omitted; it will appear automatically once review_html
+  starts carrying poster <img> tags.
+*/}}
+{{ $movies := . }}
+{{ $hasPoster := false }}
+{{ range $movies }}
+  {{ $rh := index . "review_html" }}
+  {{ if $rh }}
+    {{ if findRE `<img[^>]+src="[^"]+"` $rh 1 }}{{ $hasPoster = true }}{{ end }}
+  {{ end }}
+{{ end }}
+
+<div class="feed-table-wrap" data-table-controls>
+  <div class="feed-controls">
+    <input type="search" class="feed-search" placeholder="Search title…" aria-label="Search movies by title" />
+    <input type="number" class="feed-year-min" placeholder="From year" aria-label="Minimum year" min="1900" max="2100" />
+    <input type="number" class="feed-year-max" placeholder="To year" aria-label="Maximum year" min="1900" max="2100" />
+    <select class="feed-rating-min" aria-label="Minimum rating">
+      <option value="">Any rating</option>
+      <option value="1">★ 1+</option>
+      <option value="2">★ 2+</option>
+      <option value="3">★ 3+</option>
+      <option value="4">★ 4+</option>
+      <option value="4.5">★ 4.5+</option>
+    </select>
+    <span class="feed-count-live" aria-live="polite"></span>
+  </div>
+  <table class="feed-table feed-movies">
+    <thead>
+      <tr>
+        {{ if $hasPoster }}<th class="col-poster"></th>{{ end }}
+        <th class="col-title sortable" data-sort-key="title" data-sort-type="text">Title</th>
+        <th class="col-year sortable" data-sort-key="year" data-sort-type="num">Year</th>
+        <th class="col-watched sortable sorted-desc" data-sort-key="watched" data-sort-type="text">Watched</th>
+        <th class="col-rating sortable" data-sort-key="rating" data-sort-type="num">Rating</th>
+        <th class="col-rewatch sortable" data-sort-key="rewatch" data-sort-type="num">Rewatch</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range $movies }}
+      {{ $poster := "" }}
+      {{ if $hasPoster }}
+        {{ $rh := index . "review_html" }}
+        {{ if $rh }}
+          {{ $m := findRESubmatch `<img[^>]+src="([^"]+)"` $rh 1 }}
+          {{ if $m }}{{ $poster = index (index $m 0) 1 }}{{ end }}
+        {{ end }}
+      {{ end }}
+      {{ $r := .rating | default 0.0 }}
+      <tr
+        data-title="{{ lower .title }}"
+        data-year="{{ .year }}"
+        data-rating="{{ $r }}">
+        {{ if $hasPoster }}
+        <td class="col-poster">
+          {{ with $poster }}<img src="{{ . }}" alt="" loading="lazy" decoding="async" class="feed-poster" />{{ end }}
+        </td>
+        {{ end }}
+        <td class="col-title" data-sort="{{ lower .title }}">
+          <a href="{{ .letterboxd_url }}" target="_blank" rel="noopener">{{ .title }}</a>
+        </td>
+        <td class="col-year" data-sort="{{ .year }}">{{ .year }}</td>
+        <td class="col-watched" data-sort="{{ .watched_date }}"><time datetime="{{ .watched_date }}">{{ .watched_date }}</time></td>
+        <td class="col-rating" data-sort="{{ $r }}">
+          {{ if $r }}<span class="stars" style="--r: {{ $r }}" aria-label="{{ $r }} out of 5"></span>{{ else }}<span class="rating-empty">—</span>{{ end }}
+        </td>
+        <td class="col-rewatch" data-sort="{{ if .rewatch }}1{{ else }}0{{ end }}">{{ if .rewatch }}<span class="rewatch-yes" title="Rewatch">✓</span>{{ end }}</td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>

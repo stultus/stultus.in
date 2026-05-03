@@ -1,0 +1,71 @@
+{{ define "main" }}
+<section class="home">
+
+  {{- /* ── Hero: Text left, transparent portrait right ── */ -}}
+  <header class="home-hero">
+    <div class="home-hero-intro">
+      <h1 class="home-name">{{ .Site.Params.author }}</h1>
+      <p class="home-tagline">{{ .Site.Params.tagline }}</p>
+      <p class="home-bio">{{ .Site.Params.info | markdownify }}</p>
+      <div class="home-links">
+        <a href="mailto:{{ .Site.Params.email }}" class="home-link-btn">Email</a>
+        <a href="https://github.com/stultus" class="home-link-btn" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://x.com/_stultus/" class="home-link-btn" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://www.linkedin.com/in/stultus/" class="home-link-btn" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="home-portrait">
+      <img src="img/hrishikesh_bhaskaran-bnw.png" alt="Portrait of Hrishikesh Bhaskaran (stultus)" class="home-portrait-img">
+    </div>
+  </header>
+
+  {{- /* ── Writing ── */ -}}
+  {{ $posts := where .Site.RegularPages "Section" "post" }}
+  {{ if $posts }}
+  <section class="home-section">
+    <h2 class="home-section-heading">
+      <span class="home-section-icon">~</span> Writing
+    </h2>
+    <ul class="home-post-list">
+      {{ range first 5 $posts.ByDate.Reverse }}
+      <li class="home-post-item">
+        <a href="{{ .RelPermalink }}" class="home-post-link">
+          <span class="home-post-title">{{ .Title }}</span>
+          <span class="home-post-date">{{ .Date.Format "Jan 2006" }}</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
+    {{ if gt (len $posts) 5 }}
+    <a href="/post/" class="home-see-all">All posts &rarr;</a>
+    {{ end }}
+  </section>
+  {{ end }}
+
+  {{- /* ── Elsewhere ── */ -}}
+  <section class="home-section">
+    <h2 class="home-section-heading">
+      <span class="home-section-icon">#</span> Elsewhere
+    </h2>
+    <div class="home-elsewhere">
+      <a href="/notes/" class="elsewhere-card">
+        <span class="elsewhere-name">Digital Garden</span>
+        <span class="elsewhere-desc">Interconnected notes and ideas</span>
+      </a>
+      <a href="/projects/" class="elsewhere-card">
+        <span class="elsewhere-name">Projects</span>
+        <span class="elsewhere-desc">Things I've built</span>
+      </a>
+      <a href="/movies/" class="elsewhere-card">
+        <span class="elsewhere-name">Movies</span>
+        <span class="elsewhere-desc">Films I've watched</span>
+      </a>
+      <a href="/books/" class="elsewhere-card">
+        <span class="elsewhere-name">Books</span>
+        <span class="elsewhere-desc">Books I've read</span>
+      </a>
+    </div>
+  </section>
+
+</section>
+{{ end }}

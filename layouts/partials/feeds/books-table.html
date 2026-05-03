@@ -1,0 +1,66 @@
+{{/*
+  Render a sortable, filterable HTML table from a slice of book entries.
+  Caller passes the slice as context. Schema: see hrishi-feeds README.
+
+  The cover column is emitted only when at least one entry has cover_url.
+  Today the upstream feed has cover_url = null for every entry, so the
+  column is omitted; it will appear automatically once Goodreads starts
+  exposing cover URLs.
+*/}}
+{{ $books := . }}
+{{ $hasCover := false }}
+{{ range $books }}{{ if .cover_url }}{{ $hasCover = true }}{{ end }}{{ end }}
+
+<div class="feed-table-wrap" data-table-controls>
+  <div class="feed-controls">
+    <input type="search" class="feed-search" placeholder="Search title or author…" aria-label="Search books by title or author" />
+    <input type="number" class="feed-year-min" placeholder="From year" aria-label="Minimum read year" min="1900" max="2100" />
+    <input type="number" class="feed-year-max" placeholder="To year" aria-label="Maximum read year" min="1900" max="2100" />
+    <select class="feed-rating-min" aria-label="Minimum rating">
+      <option value="">Any rating</option>
+      <option value="1">★ 1+</option>
+      <option value="2">★ 2+</option>
+      <option value="3">★ 3+</option>
+      <option value="4">★ 4+</option>
+      <option value="5">★ 5</option>
+    </select>
+    <span class="feed-count-live" aria-live="polite"></span>
+  </div>
+  <table class="feed-table feed-books">
+    <thead>
+      <tr>
+        {{ if $hasCover }}<th class="col-cover"></th>{{ end }}
+        <th class="col-title sortable" data-sort-key="title" data-sort-type="text">Title</th>
+        <th class="col-author sortable" data-sort-key="author" data-sort-type="text">Author</th>
+        <th class="col-read sortable sorted-desc" data-sort-key="read" data-sort-type="text">Read</th>
+        <th class="col-rating sortable" data-sort-key="rating" data-sort-type="num">Rating</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{ range $books }}
+      {{ $r := .rating | default 0 }}
+      {{ $read := .read_date | default "" }}
+      <tr
+        data-title="{{ lower .title }} {{ lower .author }}"
+        data-year="{{ if $read }}{{ substr $read 0 4 }}{{ end }}"
+        data-rating="{{ $r }}">
+        {{ if $hasCover }}
+        <td class="col-cover">
+          {{ with .cover_url }}<img src="{{ . }}" alt="" loading="lazy" decoding="async" class="feed-cover" />{{ end }}
+        </td>
+        {{ end }}
+        <td class="col-title" data-sort="{{ lower .title }}">
+          <a href="{{ .goodreads_url }}" target="_blank" rel="noopener">{{ .title }}</a>
+        </td>
+        <td class="col-author" data-sort="{{ lower .author }}">{{ .author }}</td>
+        <td class="col-read" data-sort="{{ if $read }}{{ $read }}{{ else }}0000-00-00{{ end }}">
+          {{ if $read }}<time datetime="{{ $read }}">{{ $read }}</time>{{ else }}<span class="rating-empty">—</span>{{ end }}
+        </td>
+        <td class="col-rating" data-sort="{{ $r }}">
+          {{ if $r }}<span class="stars" style="--r: {{ $r }}" aria-label="{{ $r }} out of 5"></span>{{ else }}<span class="rating-empty">—</span>{{ end }}
+        </td>
+      </tr>
+      {{ end }}
+    </tbody>
+  </table>
+</div>

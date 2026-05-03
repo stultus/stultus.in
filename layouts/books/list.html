@@ -1,0 +1,58 @@
+{{ define "main" }}
+{{ $books := partial "data/feeds.html" "books" }}
+
+{{/* Sort: read_date desc, nulls last. Hugo's sort puts empty strings first
+     when ascending, so we sort dated/undated buckets separately. */}}
+{{ $dated := slice }}
+{{ $undated := slice }}
+{{ range $books }}
+  {{ if .read_date }}{{ $dated = $dated | append . }}{{ else }}{{ $undated = $undated | append . }}{{ end }}
+{{ end }}
+{{ $dated = sort $dated "read_date" "desc" }}
+{{ $sorted := $dated | append $undated }}
+
+{{/* Stats */}}
+{{ $thisYear := now.Format "2006" }}
+{{ $countThisYear := 0 }}
+{{ $sum := 0 }}
+{{ $rated := 0 }}
+{{ range $sorted }}
+  {{ if and .read_date (eq (substr .read_date 0 4) $thisYear) }}
+    {{ $countThisYear = add $countThisYear 1 }}
+  {{ end }}
+  {{ with .rating }}{{ $sum = add $sum . }}{{ $rated = add $rated 1 }}{{ end }}
+{{ end }}
+{{ $avg := 0.0 }}
+{{ if $rated }}{{ $avg = div (float $sum) (float $rated) }}{{ end }}
+
+{{ $years := slice }}
+{{ range $dated }}
+  {{ $years = $years | append (substr .read_date 0 4) }}
+{{ end }}
+{{ $years = uniq $years | sort | collections.Reverse }}
+
+<section class="feed-page">
+  <header class="list-header">
+    <a href="/" class="post-back">&larr; Home</a>
+    <h1 class="list-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="list-content">{{ . }}</div>{{ end }}
+  </header>
+
+  <div class="feed-stats">
+    <span><strong>{{ len $sorted }}</strong> books total</span>
+    <span><strong>{{ $countThisYear }}</strong> in {{ $thisYear }}</span>
+    {{ if $rated }}<span>avg rating <strong>{{ printf "%.2f" $avg }}</strong> over {{ $rated }} rated</span>{{ end }}
+  </div>
+
+  {{ if $years }}
+  <nav class="feed-year-nav" aria-label="Browse by year">
+    <span class="feed-year-nav-label">By year:</span>
+    {{ range $years }}<a href="/books/{{ . }}/">{{ . }}</a>{{ end }}
+  </nav>
+  {{ end }}
+
+  {{ partial "feeds/books-table.html" $sorted }}
+</section>
+
+<script src="{{ "js/table-controls.js" | relURL }}" defer></script>
+{{ end }}

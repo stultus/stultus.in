@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{ $movies := .Params.movies }}
+{{ $sorted := sort $movies "watched_date" "desc" }}
+{{ $year := .Params.year }}
+
+{{ $sum := 0.0 }}
+{{ $rated := 0 }}
+{{ range $sorted }}
+  {{ with .rating }}{{ $sum = add $sum . }}{{ $rated = add $rated 1 }}{{ end }}
+{{ end }}
+{{ $avg := 0.0 }}
+{{ if $rated }}{{ $avg = div $sum (float $rated) }}{{ end }}
+
+<section class="feed-page">
+  <header class="list-header">
+    <a href="/movies/" class="post-back">&larr; All movies</a>
+    <h1 class="list-title">{{ .Title }}</h1>
+    <p class="list-content">Films I watched in {{ $year }}.</p>
+  </header>
+
+  <div class="feed-stats">
+    <span><strong>{{ len $sorted }}</strong> films</span>
+    {{ if $rated }}<span>avg rating <strong>{{ printf "%.2f" $avg }}</strong> over {{ $rated }} rated</span>{{ end }}
+  </div>
+
+  {{ partial "feeds/movies-table.html" $sorted }}
+</section>
+
+<script src="{{ "js/table-controls.js" | relURL }}" defer></script>
+{{ end }}

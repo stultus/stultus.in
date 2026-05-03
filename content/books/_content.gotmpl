@@ -1,0 +1,37 @@
+{{/*
+  Generate /books/<year>/ pages from the remote books feed.
+  Year is taken from read_date; entries with no read_date are skipped here
+  (they still appear in the /books/ index under "Unread / undated").
+*/}}
+{{ $url := index site.Params.feeds "books" }}
+{{ $books := slice }}
+{{ $tr := try (resources.GetRemote $url) }}
+{{ with $tr.Err }}{{ errorf "books adapter: %s" . }}{{ end }}
+{{ with $tr.Value }}{{ $books = .Content | transform.Unmarshal }}{{ end }}
+
+{{ $years := slice }}
+{{ range $books }}
+  {{ with .read_date }}
+    {{ $years = $years | append (substr . 0 4) }}
+  {{ end }}
+{{ end }}
+{{ range (uniq $years) }}
+  {{ $year := . }}
+  {{ $entries := slice }}
+  {{ range $books }}
+    {{ if and .read_date (eq (substr .read_date 0 4) $year) }}
+      {{ $entries = $entries | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $.AddPage (dict
+    "kind" "page"
+    "path" $year
+    "title" (printf "Books — %s" $year)
+    "description" (printf "Books Hrishikesh Bhaskaran read in %s." $year)
+    "layout" "year"
+    "params" (dict
+      "books" $entries
+      "year" $year
+    )
+  ) }}
+{{ end }}
