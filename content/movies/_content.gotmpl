@@ -1,0 +1,37 @@
+{{/*
+  Generate /movies/<year>/ pages from the remote movies feed.
+  Index page (/movies/) is rendered from _index.md via layouts/movies/list.html.
+*/}}
+{{ $url := index site.Params.feeds "movies" }}
+{{ $movies := slice }}
+{{ $tr := try (resources.GetRemote $url) }}
+{{ with $tr.Err }}{{ errorf "movies adapter: %s" . }}{{ end }}
+{{ with $tr.Value }}{{ $movies = .Content | transform.Unmarshal }}{{ end }}
+
+{{/* Group by WATCHED year (diary semantics), not release year. */}}
+{{ $years := slice }}
+{{ range $movies }}
+  {{ with .watched_date }}
+    {{ $years = $years | append (substr . 0 4) }}
+  {{ end }}
+{{ end }}
+{{ range (uniq $years) }}
+  {{ $year := . }}
+  {{ $entries := slice }}
+  {{ range $movies }}
+    {{ if and .watched_date (eq (substr .watched_date 0 4) $year) }}
+      {{ $entries = $entries | append . }}
+    {{ end }}
+  {{ end }}
+  {{ $.AddPage (dict
+    "kind" "page"
+    "path" $year
+    "title" (printf "Movies — %s" $year)
+    "description" (printf "Films Hrishikesh Bhaskaran watched in %s." $year)
+    "layout" "year"
+    "params" (dict
+      "movies" $entries
+      "year" $year
+    )
+  ) }}
+{{ end }}

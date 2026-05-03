@@ -1,0 +1,56 @@
+{{ define "main" }}
+<article class="post">
+  <header class="post-header">
+    <a href="/" class="post-back">&larr; Home</a>
+    <h1 class="post-title">{{ .Title }}</h1>
+  </header>
+
+  <div class="post-body">
+    {{ .Content }}
+
+    {{ $movies := partial "data/feeds.html" "movies" }}
+    {{ $movies = sort $movies "watched_date" "desc" }}
+    {{ if $movies }}
+    <h2>Recently watched</h2>
+    <ul class="now-feed-list">
+      {{ range first 5 $movies }}
+      <li>
+        <a href="{{ .letterboxd_url }}" target="_blank" rel="noopener">{{ .title }}</a>
+        <span class="now-feed-meta">
+          <span class="now-feed-year">{{ .year }}</span>
+          {{ with .rating }} · <span class="stars" style="--r: {{ . }}" aria-label="{{ . }} out of 5"></span>{{ end }}
+          {{ with .watched_date }} · <time datetime="{{ . }}">{{ . }}</time>{{ end }}
+        </span>
+      </li>
+      {{ end }}
+    </ul>
+    <p><a href="/movies/">All movies &rarr;</a></p>
+    {{ end }}
+
+    {{ $books := partial "data/feeds.html" "books" }}
+    {{ $dated := slice }}
+    {{ range $books }}{{ if .read_date }}{{ $dated = $dated | append . }}{{ end }}{{ end }}
+    {{ $dated = sort $dated "read_date" "desc" }}
+    {{ if $dated }}
+    <h2>Recently read</h2>
+    <ul class="now-feed-list">
+      {{ range first 5 $dated }}
+      <li>
+        <a href="{{ .goodreads_url }}" target="_blank" rel="noopener">{{ .title }}</a>
+        <span class="now-feed-meta">
+          <span class="now-feed-year">{{ .author }}</span>
+          {{ with .rating }} · <span class="stars" style="--r: {{ . }}" aria-label="{{ . }} out of 5"></span>{{ end }}
+          {{ with .read_date }} · <time datetime="{{ . }}">{{ . }}</time>{{ end }}
+        </span>
+      </li>
+      {{ end }}
+    </ul>
+    <p><a href="/books/">All books &rarr;</a></p>
+    {{ end }}
+  </div>
+
+  <footer class="post-footer">
+    <a href="/" class="post-footer-link">&larr; Home</a>
+  </footer>
+</article>
+{{ end }}

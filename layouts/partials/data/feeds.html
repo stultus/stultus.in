@@ -1,0 +1,25 @@
+{{/*
+  Fetch a hrishi-feeds JSON feed and return the parsed slice.
+
+  Call as: {{ partial "data/feeds.html" "movies" }} or "books".
+
+  Source URLs come from Site.Params.feeds.<name>. The fetch is cached by
+  Hugo's getresource cache (see [caches.getresource] in config.toml).
+  Failures fail the build — we do not silently render empty tables.
+*/}}
+{{ $name := . }}
+{{ $url := index site.Params.feeds $name }}
+{{ if not $url }}
+  {{ errorf "feeds partial: no URL configured for feed %q" $name }}
+{{ end }}
+
+{{ $data := slice }}
+{{ $tr := try (resources.GetRemote $url) }}
+{{ with $tr.Err }}
+  {{ errorf "feeds partial: fetching %q failed: %s" $url . }}
+{{ end }}
+{{ with $tr.Value }}
+  {{ $data = .Content | transform.Unmarshal }}
+{{ end }}
+
+{{ return $data }}

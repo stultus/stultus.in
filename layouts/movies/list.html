@@ -1,0 +1,53 @@
+{{ define "main" }}
+{{ $movies := partial "data/feeds.html" "movies" }}
+{{ $sorted := sort $movies "watched_date" "desc" }}
+
+{{/* Stats */}}
+{{ $thisYear := now.Format "2006" }}
+{{ $countThisYear := 0 }}
+{{ $sum := 0.0 }}
+{{ $rated := 0 }}
+{{ range $sorted }}
+  {{ if and .watched_date (eq (substr .watched_date 0 4) $thisYear) }}
+    {{ $countThisYear = add $countThisYear 1 }}
+  {{ end }}
+  {{ with .rating }}
+    {{ $sum = add $sum . }}
+    {{ $rated = add $rated 1 }}
+  {{ end }}
+{{ end }}
+{{ $avg := 0.0 }}
+{{ if $rated }}{{ $avg = div $sum (float $rated) }}{{ end }}
+
+{{/* Year list (by watched year, descending) */}}
+{{ $years := slice }}
+{{ range $sorted }}
+  {{ with .watched_date }}{{ $years = $years | append (substr . 0 4) }}{{ end }}
+{{ end }}
+{{ $years = uniq $years | sort | collections.Reverse }}
+
+<section class="feed-page">
+  <header class="list-header">
+    <a href="/" class="post-back">&larr; Home</a>
+    <h1 class="list-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="list-content">{{ . }}</div>{{ end }}
+  </header>
+
+  <div class="feed-stats">
+    <span><strong>{{ len $sorted }}</strong> films total</span>
+    <span><strong>{{ $countThisYear }}</strong> in {{ $thisYear }}</span>
+    {{ if $rated }}<span>avg rating <strong>{{ printf "%.2f" $avg }}</strong> over {{ $rated }} rated</span>{{ end }}
+  </div>
+
+  {{ if $years }}
+  <nav class="feed-year-nav" aria-label="Browse by year">
+    <span class="feed-year-nav-label">By year:</span>
+    {{ range $years }}<a href="/movies/{{ . }}/">{{ . }}</a>{{ end }}
+  </nav>
+  {{ end }}
+
+  {{ partial "feeds/movies-table.html" $sorted }}
+</section>
+
+<script src="{{ "js/table-controls.js" | relURL }}" defer></script>
+{{ end }}
