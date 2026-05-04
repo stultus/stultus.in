@@ -8,25 +8,6 @@
   <div class="post-body">
     {{ .Content }}
 
-    {{ $movies := partial "data/feeds.html" "movies" }}
-    {{ $movies = sort $movies "watched_date" "desc" }}
-    {{ if $movies }}
-    <h2>Recently watched</h2>
-    <ul class="now-feed-list">
-      {{ range first 5 $movies }}
-      <li>
-        <a href="{{ .letterboxd_url }}" target="_blank" rel="noopener">{{ .title }}</a>
-        <span class="now-feed-meta">
-          <span class="now-feed-year">{{ .year }}</span>
-          {{ with .rating }} · <span class="stars" style="--r: {{ . }}" aria-label="{{ . }} out of 5"></span>{{ end }}
-          {{ with .watched_date }} · <time datetime="{{ . }}">{{ . }}</time>{{ end }}
-        </span>
-      </li>
-      {{ end }}
-    </ul>
-    <p><a href="/movies/">All movies &rarr;</a></p>
-    {{ end }}
-
     {{ $books := partial "data/feeds.html" "books" }}
     {{ $dated := slice }}
     {{ range $books }}{{ if .read_date }}{{ $dated = $dated | append . }}{{ end }}{{ end }}
@@ -46,6 +27,25 @@
       {{ end }}
     </ul>
     <p><a href="/books/">All books &rarr;</a></p>
+    {{ end }}
+
+    {{ $movies := partial "data/feeds.html" "movies" }}
+    {{ $movies = sort $movies "watched_date" "desc" }}
+    {{ if $movies }}
+    <h2>Recently watched</h2>
+    <ul class="now-feed-list">
+      {{ range first 5 $movies }}
+      <li>
+        <a href="{{ .letterboxd_url }}" target="_blank" rel="noopener">{{ .title }}</a>
+        <span class="now-feed-meta">
+          <span class="now-feed-year">{{ .year }}</span>
+          {{ with .rating }} · <span class="stars" style="--r: {{ . }}" aria-label="{{ . }} out of 5"></span>{{ end }}
+          {{ with .watched_date }} · <time datetime="{{ . }}">{{ . }}</time>{{ end }}
+        </span>
+      </li>
+      {{ end }}
+    </ul>
+    <p><a href="/movies/">All movies &rarr;</a></p>
     {{ end }}
   </div>
 

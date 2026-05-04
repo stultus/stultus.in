@@ -18,7 +18,3 @@ Leading engineering at [Entri](https://entri.app). Building products that make e
 Contributing to [PeARS](https://pearsproject.org/) — a decentralized search engine.
 
 Tending my [digital garden](https://stultus.in/notes/) — 115+ interconnected notes and growing.
-
-## Thinking about
-
-*(Update this with current interests/questions)*
