@@ -15,6 +15,8 @@ Leading engineering at [Entri](https://entri.app). Building products that make e
 
 ## Building
 
+Building [Scriptty](https://github.com/stultus/scriptty) — an offline desktop screenwriting app for Malayalam and English.
+
 Contributing to [PeARS](https://pearsproject.org/) — a decentralized search engine.
 
 Tending my [digital garden](https://stultus.in/notes/) — 115+ interconnected notes and growing.
