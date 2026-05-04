@@ -1,0 +1,39 @@
+{{ define "main" }}
+<article class="bookmarks">
+  <header class="bookmarks-header">
+    <a href="/" class="post-back">&larr; Home</a>
+    <h1 class="bookmarks-title">{{ .Title }}</h1>
+    {{ with .Content }}<div class="bookmarks-subtitle">{{ . }}</div>{{ end }}
+  </header>
+
+  <div class="bookmarks-body" data-bookmarks-filter>
+    <div class="bookmarks-controls">
+      <input type="search" class="bookmarks-search" placeholder="Filter by title, source, or topic…" aria-label="Filter bookmarks" />
+      <span class="bookmarks-count" aria-live="polite"></span>
+    </div>
+
+    <ul class="bookmarks-list">
+      {{ range .Site.Data.bookmarks }}
+      {{ $needle := printf "%s %s %s %s %s" .title (.tag | default "") (.author | default "") (.source | default "") (.note | default "") | lower }}
+      <li class="bookmarks-entry" data-search="{{ $needle }}">
+        <h3 class="bookmarks-entry-title">
+          <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+        </h3>
+        <div class="bookmarks-entry-meta">
+          {{ with .tag }}<span class="bookmarks-entry-tag">{{ . }}</span>{{ end }}
+          {{ with .author }}<span class="bookmarks-entry-author">{{ . }}</span>{{ end }}
+          {{ with .source }}<span class="bookmarks-entry-sep">·</span><span class="bookmarks-entry-source">{{ . }}</span>{{ end }}
+          {{ with .published }}<span class="bookmarks-entry-sep">·</span><time datetime="{{ . }}" class="bookmarks-entry-date">{{ . }}</time>{{ end }}
+        </div>
+        {{ with .note }}<p class="bookmarks-entry-note">{{ . }}</p>{{ end }}
+      </li>
+      {{ end }}
+    </ul>
+  </div>
+  <script src="{{ "js/bookmarks-filter.js" | relURL }}" defer></script>
+
+  <footer class="post-footer">
+    <a href="/" class="post-footer-link">&larr; Home</a>
+  </footer>
+</article>
+{{ end }}
