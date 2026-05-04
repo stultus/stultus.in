@@ -39,7 +39,6 @@
         <th class="col-year sortable" data-sort-key="year" data-sort-type="num">Year</th>
         <th class="col-watched sortable sorted-desc" data-sort-key="watched" data-sort-type="text">Watched</th>
         <th class="col-rating sortable" data-sort-key="rating" data-sort-type="num">Rating</th>
-        <th class="col-rewatch sortable" data-sort-key="rewatch" data-sort-type="num">Rewatch</th>
       </tr>
     </thead>
     <tbody>
@@ -70,7 +69,6 @@
         <td class="col-rating" data-sort="{{ $r }}">
           {{ if $r }}<span class="stars" style="--r: {{ $r }}" aria-label="{{ $r }} out of 5"></span>{{ else }}<span class="rating-empty">—</span>{{ end }}
         </td>
-        <td class="col-rewatch" data-sort="{{ if .rewatch }}1{{ else }}0{{ end }}">{{ if .rewatch }}<span class="rewatch-yes" title="Rewatch">✓</span>{{ end }}</td>
       </tr>
       {{ end }}
     </tbody>
