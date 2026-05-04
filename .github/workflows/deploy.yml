@@ -11,6 +11,13 @@ concurrency:
   group: deploy
   cancel-in-progress: false
 
+# Opt JavaScript-action runtimes (peaceiris/actions-hugo,
+# peaceiris/actions-gh-pages) into Node.js 24. GitHub will force this on
+# 2026-06-02; until then the env var avoids the deprecation warning and
+# surfaces any breakage now rather than at the cutoff.
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: "true"
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
