@@ -1,11 +1,16 @@
 {{ define "main" }}
-<article class="post">
-  <header class="post-header">
+<article class="now">
+  <header class="now-header">
     <a href="/" class="post-back">&larr; Home</a>
-    <h1 class="post-title">{{ .Title }}</h1>
+    <h1 class="now-title">{{ .Title }}</h1>
+    <p class="now-subtitle">
+      A snapshot of what I'm up to.
+      <a href="https://nownownow.com/about" target="_blank" rel="noopener">What's a /now page?</a>
+    </p>
+    <p class="now-updated">// updated {{ (.Lastmod | default .Date).Format "January 2, 2006" }}</p>
   </header>
 
-  <div class="post-body">
+  <div class="now-body">
     {{ .Content }}
 
     {{ $books := partial "data/feeds.html" "books" }}
@@ -14,38 +19,28 @@
     {{ $dated = sort $dated "read_date" "desc" }}
     {{ if $dated }}
     <h2>Recently read</h2>
-    <ul class="now-feed-list">
+    <ul class="now-feed">
       {{ range first 5 $dated }}
       <li>
-        <a href="{{ .goodreads_url }}" target="_blank" rel="noopener">{{ .title }}</a>
-        <span class="now-feed-meta">
-          <span class="now-feed-year">{{ .author }}</span>
-          {{ with .rating }} · <span class="stars" style="--r: {{ . }}" aria-label="{{ . }} out of 5"></span>{{ end }}
-          {{ with .read_date }} · <time datetime="{{ . }}">{{ . }}</time>{{ end }}
-        </span>
+        <a href="{{ .goodreads_url }}" target="_blank" rel="noopener">{{ .title }}</a><span class="now-feed-meta"><span class="now-feed-sep">·</span> {{ .author }}{{ with .read_date }} <span class="now-feed-sep">·</span> <time datetime="{{ . }}">{{ . }}</time>{{ end }}{{ with .rating }} <span class="now-feed-sep">·</span> <span class="stars" style="--r: {{ . }}" aria-label="{{ . }} out of 5"></span>{{ end }}</span>
       </li>
       {{ end }}
     </ul>
-    <p><a href="/books/">All books &rarr;</a></p>
+    <a href="/books/" class="now-see-all">All books &rarr;</a>
     {{ end }}
 
     {{ $movies := partial "data/feeds.html" "movies" }}
     {{ $movies = sort $movies "watched_date" "desc" }}
     {{ if $movies }}
     <h2>Recently watched</h2>
-    <ul class="now-feed-list">
+    <ul class="now-feed">
       {{ range first 5 $movies }}
       <li>
-        <a href="{{ .letterboxd_url }}" target="_blank" rel="noopener">{{ .title }}</a>
-        <span class="now-feed-meta">
-          <span class="now-feed-year">{{ .year }}</span>
-          {{ with .rating }} · <span class="stars" style="--r: {{ . }}" aria-label="{{ . }} out of 5"></span>{{ end }}
-          {{ with .watched_date }} · <time datetime="{{ . }}">{{ . }}</time>{{ end }}
-        </span>
+        <a href="{{ .letterboxd_url }}" target="_blank" rel="noopener">{{ .title }}</a><span class="now-feed-meta"><span class="now-feed-sep">·</span> {{ .year }}{{ with .watched_date }} <span class="now-feed-sep">·</span> <time datetime="{{ . }}">{{ . }}</time>{{ end }}{{ with .rating }} <span class="now-feed-sep">·</span> <span class="stars" style="--r: {{ . }}" aria-label="{{ . }} out of 5"></span>{{ end }}{{ if .rewatch }} <span class="now-feed-sep">·</span> rewatch{{ end }}</span>
       </li>
       {{ end }}
     </ul>
-    <p><a href="/movies/">All movies &rarr;</a></p>
+    <a href="/movies/" class="now-see-all">All movies &rarr;</a>
     {{ end }}
   </div>
 
