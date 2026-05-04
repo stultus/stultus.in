@@ -47,7 +47,23 @@
     "@type": "WebPage",
     "@id": "{{ .Permalink }}"
   },
-  "image": "{{ "img/hrishikesh_bhaskaran.jpg" | absURL }}",
+  "image": {
+    "@type": "ImageObject",
+    "@id": "{{ "img/hrishikesh_bhaskaran.jpg" | absURL }}",
+    "url": "{{ "img/hrishikesh_bhaskaran.jpg" | absURL }}",
+    "contentUrl": "{{ "img/hrishikesh_bhaskaran.jpg" | absURL }}",
+    "width": 600,
+    "height": 800,
+    "encodingFormat": "image/jpeg",
+    "caption": "Portrait of Hrishikesh Bhaskaran (stultus), Vice President of Engineering at Entri",
+    "name": "Hrishikesh Bhaskaran",
+    "creditText": "Hrishikesh Bhaskaran",
+    "copyrightHolder": { "@type": "Person", "name": "Hrishikesh Bhaskaran" },
+    "creator": { "@type": "Person", "name": "Hrishikesh Bhaskaran" },
+    "license": "{{ .Site.BaseURL }}",
+    "representativeOfPage": true,
+    "isFamilyFriendly": true
+  },
   "description": "Hrishikesh Bhaskaran is a software engineer, FOSS contributor, and screenwriter from Kerala, India. Vice President of Engineering at Entri. Also known by the pseudonym stultus.",
   "nationality": "Indian",
   "address": {
