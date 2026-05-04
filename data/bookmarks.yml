@@ -1,0 +1,20 @@
+# Articles I've saved and would recommend.
+#
+# Each entry needs `title` and `url`. Optional: `tag`, `author`, `source`,
+# `published`, `added`, `note`. Order is intentional (most-recommended first).
+# Suggested tags: fiction, essay, leadership, engineering, design, longread, talk.
+
+- title: "Cream"
+  url: "https://www.newyorker.com/magazine/2019/01/28/cream-haruki-murakami"
+  tag: fiction
+  author: Haruki Murakami
+  source: The New Yorker
+  published: "2019-01-28"
+  note: "An 18-year-old is invited to a piano recital on a Kobe hillside that turns out not to exist, and meets an old man on a bench who poses a riddle — a circle with many centers and no circumference — that he'll spend the rest of his life trying to solve. Quintessential late Murakami: small mystery, large interior weather."
+
+- title: "Broken Ownership"
+  url: "https://blog.alexewerlof.com/p/broken-ownership"
+  tag: leadership
+  author: Alex Ewerlöf
+  source: blog.alexewerlof.com
+  note: "True ownership lives at the intersection of three things in the same hands — knowledge, mandate, and responsibility — and Ewerlöf catalogues the six failure modes when any one is missing (Monkey with a Gun, Foot Soldier, Baby Parent, Teenager, Coma, Gambler). The cleanest argument I've read for why 'you build it, you own it' beats 'you build it, you run it'."
