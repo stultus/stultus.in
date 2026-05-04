@@ -48,22 +48,22 @@ style = "monokai"
 
 # Menu links
 [[menu.main]]
-    name = "blog"
+    name = "notes"
     weight = 1
+    url = "/notes/"
+[[menu.main]]
+    name = "blog"
+    weight = 2
     url  = "/post/"
 [[menu.main]]
     name = "projects"
-    weight = 2
+    weight = 3
     url = "/projects/"
 [[menu.main]]
     name = "now"
-    weight = 3
+    weight = 4
     url = "/now/"
 [[menu.main]]
     name = "about"
-    weight = 4
-    url = "/about/"
-[[menu.main]]
-    name = "notes"
     weight = 5
-    url = "/notes/"
+    url = "/about/"
