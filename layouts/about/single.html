@@ -1,0 +1,36 @@
+{{ define "main" }}
+{{ $photo := .Site.Params.avatarurl | default "img/hrishikesh_bhaskaran.jpg" }}
+<article class="about-page" itemscope itemtype="https://schema.org/Person">
+
+  <header class="about-header">
+    <a href="/" class="post-back">&larr; Home</a>
+    <div class="about-hero">
+      <div class="about-hero-text">
+        <h1 class="about-title" itemprop="name">{{ .Site.Params.author }}</h1>
+        <p class="about-tagline">{{ .Site.Params.tagline }}</p>
+      </div>
+      <figure class="about-hero-photo">
+        <img
+          src="{{ $photo | absURL }}"
+          alt="Hrishikesh Bhaskaran (stultus) — Vice President of Engineering at Entri, screenwriter of Neelavelicham, FOSS contributor based in Kochi, Kerala"
+          class="about-photo"
+          width="600"
+          height="800"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+          itemprop="image">
+      </figure>
+    </div>
+  </header>
+
+  <div class="about-body" itemprop="description">
+    {{ .Content }}
+  </div>
+
+  <footer class="post-footer">
+    <a href="/" class="post-footer-link">&larr; Home</a>
+  </footer>
+
+</article>
+{{ end }}
