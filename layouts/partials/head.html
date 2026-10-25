@@ -25,8 +25,7 @@
 
 {{/* ── Determine image ── */}}
 {{ $img := "" }}
-{{ with .Site.Params.ogImage }}{{ $img = . | absURL }}{{ end }}
-{{ if not $img }}{{ with .Site.Params.avatarurl }}{{ $img = . | absURL }}{{ end }}{{ end }}
+{{ $img = partialCached "og-image.html" . .RelPermalink }}
 {{ with .Params.image }}{{ $img = . | absURL }}{{ end }}
 
 {{/* ── Determine title for social ── */}}

@@ -1,0 +1,39 @@
+{{- /*
+  Builds a 1200x630 share card for the current page: author name,
+  page title, a footer line (section and date for posts) and the owl
+  logo. Returns the image's absolute URL.
+  The card font can't render Malayalam, so Malayalam titles are left
+  off the card unless the page sets a `cardTitle`.
+*/ -}}
+{{- $bold := resources.Get "og/JetBrainsMono-Bold.ttf" -}}
+{{- $regular := resources.Get "og/JetBrainsMono-Regular.ttf" -}}
+{{- $muted := "#6b7280" -}}
+
+{{- $title := .Title -}}
+{{- if .IsHome }}{{ $title = site.Params.tagline }}{{ end -}}
+{{- if findRE `[\x{0D00}-\x{0D7F}]` $title 1 }}{{ $title = "" }}{{ end -}}
+{{- with .Params.cardTitle }}{{ $title = . }}{{ end -}}
+{{- $footer := "stultus.in" -}}
+{{- if and .IsPage (eq .Section "post") }}{{ $footer = printf "blog · %s" (.Date.Format "2 Jan 2006") }}{{ end -}}
+
+{{- $len := len $title -}}
+{{- $size := 64 -}}
+{{- if gt $len 60 }}{{ $size = 44 }}{{ else if gt $len 30 }}{{ $size = 54 }}{{ end -}}
+
+{{- $logo := (resources.Get "og/logo.png").Resize "300x" -}}
+
+{{- $filters := slice
+  (images.Text site.Params.author (dict "font" $regular "size" 28 "color" $muted "x" 72 "y" 64))
+  (images.Overlay $logo 828 (div (sub 630 $logo.Height) 2))
+  (images.Text $footer (dict "font" $regular "size" 28 "color" $muted "x" 72 "y" 536))
+-}}
+
+{{- with $title -}}
+  {{- $text := resources.Get "og/textbox.png" | images.Filter (images.Text . (dict
+      "font" $bold "size" $size "color" "#2e3440" "linespacing" (div $size 4)
+    )) -}}
+  {{- $filters = $filters | append (images.Overlay $text 62 140) -}}
+{{- end -}}
+
+{{- $card := resources.Get "og/base.png" | images.Filter $filters -}}
+{{- return $card.Permalink -}}
