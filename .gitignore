@@ -12,3 +12,6 @@ hugo.linux
 # Temporary lock file while building
 /.hugo_build.lock
 
+
+# macOS Finder metadata
+.DS_Store
