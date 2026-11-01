@@ -33,8 +33,19 @@ jobs:
           hugo-version: '0.159.1'
           extended: true
 
+      # On a feeds-updated dispatch, fetch the feeds at the pushed commit.
+      # raw.githubusercontent.com caches main for 5 minutes, so the branch
+      # URLs in config.toml would serve the previous data to this build.
       - name: Build
-        run: hugo --minify
+        env:
+          FEEDS_SHA: ${{ github.event.client_payload.sha }}
+        run: |
+          if [ -n "$FEEDS_SHA" ]; then
+            base="https://raw.githubusercontent.com/stultus/hrishi-feeds/$FEEDS_SHA/data"
+            export HUGO_PARAMS_FEEDS_BOOKS="$base/books.json"
+            export HUGO_PARAMS_FEEDS_MOVIES="$base/movies.json"
+          fi
+          hugo --minify
 
       - name: Publish to stultus.github.io
         uses: peaceiris/actions-gh-pages@v4
